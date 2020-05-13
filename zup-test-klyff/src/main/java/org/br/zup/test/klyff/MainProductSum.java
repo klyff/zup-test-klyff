@@ -20,7 +20,7 @@ public class MainProductSum {
     public static int sumProductValues(){
 
         List<Product> products = getProducts();
-        int amount = products.stream().filter(o -> o.getPrice() > 10).mapToInt(Product::getPrice).sum();
+        int amount = products.stream().filter(o -> o.getPrice() > 0).mapToInt(Product::getPrice).sum();
         log.info("========================");
         log.info("\tProduct List ");
         log.info("========================");
